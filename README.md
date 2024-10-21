@@ -11,6 +11,6 @@ python ./main.py
 # 特筆事項
 PyAudioは音声デバイスのアクセスに必要なportaudioに依存します
 
-Ubuntu/Debian: sudo apt-get install portaudio19-dev
-macOS: brew install portaudio
-Windows: Visual C++ build toolsが必要な場合があります
+Ubuntu/Debian: sudo apt-get install portaudio19-dev  
+macOS: brew install portaudio  
+Windows: Visual C++ build toolsが必要な場合があります  
