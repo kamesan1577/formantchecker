@@ -263,8 +263,14 @@ class FormantAnalyzer:
 
     def run(self):
         self.anim = FuncAnimation(
-            self.fig, self.update, interval=50, cache_frame_data=False, save_count=100
+            self.fig,
+            self.update,
+            interval=50,
+            cache_frame_data=False,
+            save_count=100,
+            repeat=True,  # repeatを追加
         )
+        self.anim._start()  # アニメーションを明示的に開始
         plt.show(block=True)
         return self.anim
 
@@ -282,8 +288,7 @@ class FormantAnalyzer:
 if __name__ == "__main__":
     try:
         analyzer = FormantAnalyzer()
-        anim = analyzer.run()
-        plt.show()
+        analyzer.run()  # animの代入を削除
     except KeyboardInterrupt:
         print("\nプログラムを終了します")
     finally:
